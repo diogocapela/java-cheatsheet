@@ -63,7 +63,6 @@ public class Person {
 
   // Can't never reference this.dna, because is a static variable
   // It'll never exist for a single instance, but for all the objects at same time
-  
   static String dna = "this variable is shared for all the objects";
   
 }
@@ -93,6 +92,44 @@ for(int i = 0; i < myList.size(); i++) {
 // Enhanced For Loop
 for(String item : myList) {
   System.out.println(item);
+}
+```
+
+### Abstract
+```java
+public abstract class Device() {
+
+  // Because this method is abstract, all the classes that extend this class need to implement the breakDevice() method.
+  public abstract void breakDevice() {
+  
+  }
+  
+}
+```
+
+### Interface
+```java
+public interface Switchable {
+
+  public void turnOn();
+  public void turnOff();
+
+}
+
+// Java is single inheritance multiple interface language.
+// We can extend only for one type of class, but we can implement many interfaces.
+// Throws error without turnOn and turnOff methods.
+
+public class Light extends Device implements Switchable {
+  
+  public void turnOn() {
+    // ...
+  }
+  
+  public void turnOff() {
+    // ...
+  }
+  
 }
 ```
 
