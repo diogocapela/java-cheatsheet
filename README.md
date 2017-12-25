@@ -41,6 +41,22 @@ public class Person {
 }
 ```
 
+### Inheritance and Polymorphism
+```java
+public class Doe extends Person {
+
+  // This class now has all the functionality of the Person class by extending it.
+  
+  // We are adding functionality to the setFirstName() method by overriding it.
+  @Override
+  public void setFirstName(String firstName) {
+    // Note the use of super instead of the this keyword because of override.
+    super.firstName = firstName;
+  }
+  
+}
+```
+
 ### Collections API - Lists
 The List interface represents an ordered collection.
 
