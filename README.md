@@ -262,3 +262,61 @@ public class FirstActivity extends Activity {
   
 }
 ```
+
+### Passing Data with Intents
+```java
+// On first activity
+
+public class MainActivity extends Activity {
+
+  // Detail request to specify what was the reason for why we were requesting the data
+  public static final int DETAIL_REQUEST = 1;
+
+  private Button myButton = null;
+  
+  @Override
+  protected void onCreate(Bundle savedInstanceState) {
+  
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.activity_main);
+    
+    myButton = (Button) findViewById(R.id.buttonGoDetailsActivity);
+    
+    myButton.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View view) {
+        Intent i = new Intent(view.getContext(), DetailsActivity.class);
+        // Send key-value pair along with the intent
+        i.putExtra("KeyForSending", "Data that goes to the details activity");
+        startActivity(i, DETAIL_REQUEST);
+      }
+    }
+    
+  }
+  
+}
+
+// On second activity
+
+public class DetailsActivity extends Activity {
+  
+  @Override
+  protected void onCreate(Bundle savedInstanceState) {
+  
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.activity_details);
+    
+    // Get the data that was sent
+    Bundle extras = getIntent().getExtras();
+    
+    if(extras != null) {
+      String data = extras.getString("KeyForSending");
+      if(data != null) {
+        Toast.makeText(this, data, Toast.LENGTH_SHORT).show();
+      }
+    }
+    
+  }
+  
+}
+```
