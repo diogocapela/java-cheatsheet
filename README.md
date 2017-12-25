@@ -178,6 +178,7 @@ The Set interface is an unordered collection and does not allow duplicate elemen
 #### HashSet
 ```java
 HashSet<String> mySet = new HashSet<String>();
+
 myList.add("Cat");
 myList.add("Dog");
 myList.add("Moose");
@@ -212,7 +213,7 @@ smallMap.get("secondKey") // -> Dog
 // Nesting maps
 HashMap<String,HashMap<String,String>> bigMap = new HashMap<String,HashMap<String,String>>();
 
-bigMap.put("Animals",smallMap);
+bigMap.put("Animals", smallMap);
 ```
 
 #### LinkedHashMap
