@@ -131,6 +131,20 @@ public class Light extends Device implements Switchable {
   }
   
 }
+
+// Interfaces can also be used as a variable type.
+
+public class Switch {
+
+  public void turnOnSwitchable(Switchable thing) {
+    thing.turnOn();
+  }
+  
+  public void turnOffSwitchable(Switchable thing) {
+    thing.turnOff();
+  }
+  
+}
 ```
 
 ### Collections API - Lists
