@@ -57,6 +57,45 @@ public class Doe extends Person {
 }
 ```
 
+### Static
+```java
+public class Person {
+
+  // Can't never reference this.dna, because is a static variable
+  // It'll never exist for a single instance, but for all the objects at same time
+  
+  static String dna = "this variable is shared for all the objects";
+  
+}
+```
+
+### Final
+```java
+// Cant ever change variable
+public final int meaningOfLife = 42;
+
+// Cant ever change or override method
+public final void getMeaning() {
+  Log.e("The meaning of life is 42.");
+}
+```
+
+### Enhanced For Loop (For Each Loop)
+```java
+ArrayList<String> myList = new ArrayList<String>();
+
+// Normal Foor Loop
+for(int i = 0; i < myList.size(); i++) {
+  String item = myList.get(i);
+  System.out.println(item);
+}
+
+// Enhanced For Loop
+for(String item : myList) {
+  System.out.println(item);
+}
+```
+
 ### Collections API - Lists
 The List interface represents an ordered collection.
 
