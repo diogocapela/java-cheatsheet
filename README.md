@@ -1,4 +1,4 @@
-# java-cheatsheet
+# Java
 
 ### Access Specifiers
 ```
@@ -231,8 +231,34 @@ bigMap.put("Animals", smallMap);
 // ...
 ```
 
-# android
+# Android
 
 ### Activity Lifecycle
 ![Android Activity Lifecycle](https://github.com/diogocapela/java-cheatsheet/raw/master/img/android-activity-lifecycle.png)
 
+### Create Intent
+```java
+public class FirstActivity extends Activity {
+
+  private Button myButton = null;
+  
+  @Override
+  protected void onCreate(Bundle savedInstanceState) {
+  
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.activity_first);
+    
+    myButton = (Button) findViewById(R.id.buttonGoSecondActivity);
+    
+    myButton.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View view) {
+        Intent i = new Intent(view.getContext(), SecondActivity.class);
+        startActivity(i);
+      }
+    }
+    
+  }
+  
+}
+```
