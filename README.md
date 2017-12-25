@@ -1,6 +1,16 @@
 # java-cheatsheet
 
-### Constructor
+### Access Specifiers
+```
+Specifier             Class      Package    Subclass   World
+------------------------------------------------------------------
+public                X          X          X          X
+protected             X          X          X
+(no modifier)         X          X
+private               X
+```
+
+### Constructor, Getters and Setters
 ```java
 public class Person {
 
