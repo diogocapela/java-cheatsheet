@@ -230,3 +230,9 @@ bigMap.put("Animals", smallMap);
 ```java
 // ...
 ```
+
+# android
+
+### Activity Lifecycle
+![Android Activity Lifecycle](https://github.com/diogocapela/java-cheatsheet/raw/master/img/android-activity-lifecycle.png)
+
